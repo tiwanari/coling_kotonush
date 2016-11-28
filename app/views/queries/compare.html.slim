@@ -1,0 +1,4 @@
+table
+  - @selected_queries.each do |query|
+    td
+      = render partial: "shared/ranking", locals: {query: query}

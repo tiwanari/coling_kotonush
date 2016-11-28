@@ -1,0 +1,54 @@
+= include_gon
+button#toggle_reasons.btn.btn-xs.btn-default show result reasons
+div#result_reasons style="display: none;"
+  h3
+    | Result Reasons
+  table.table.table-striped.table-bordered
+    thead
+      tr
+        th colspan="2"
+        th
+          | positive
+        th
+          | negative
+    tbody
+      tr
+        th rowspan="2"
+          | co_occurrences
+        th count
+        td.reason.co_occurrences_pos_count
+        td.reason.co_occurrences_neg_count
+      tr
+        th sentences
+        td.reason.co_occurrences_pos_sentences
+        td.reason.co_occurrences_neg_sentences
+      tr
+        th rowspan="2"
+          | dependencies
+        th count
+        td.reason.dependencies_pos_count
+        td.reason.dependencies_neg_count
+      tr
+        th sentences
+        td.reason.dependencies_pos_sentences
+        td.reason.dependencies_neg_sentences
+      tr
+        th rowspan="2"
+          | similia
+        th count
+        td.reason.similia_pos_count
+        td.reason.similia_neg_count
+      tr
+        th sentences
+        td.reason.similia_pos_sentences
+        td.reason.similia_neg_sentences
+      tr
+        th rowspan="2"
+          | comparatives
+        th count
+        td.reason.comparatives_pos_count
+        td.reason.comparatives_neg_count
+      tr
+        th sentences
+        td.reason.comparatives_pos_sentences
+        td.reason.comparatives_neg_sentences

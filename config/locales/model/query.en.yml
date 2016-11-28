@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    models:
+      query: Query
+    attributes:
+      query:
+        adjective_id: Adjective
+        adjective: Adjective
+        concepts: Concepts
+        concept:
+          name: Name
+        from: From
+        to: To
+        gender: Gender
+        region: Region
+  query:
+    gender:
+      male: Male
+      female: Female
+      not_specified: Not Specified
+    region:
+      not_specified: Not Specified
+    form:
+      query: Query
+      options: Options
+      not_specified: Not Specified
+      remove: Remove
+      add_concept: Add a Concept
+      ok: OK

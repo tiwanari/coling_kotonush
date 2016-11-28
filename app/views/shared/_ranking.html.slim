@@ -1,0 +1,40 @@
+- model_class = Query
+h5
+  | Adjective: #{query.adjective.localized_name}
+table.table
+  thead
+    th
+      = model_class.human_attribute_name(:from)
+    th
+      = model_class.human_attribute_name(:to)
+    th
+      = model_class.human_attribute_name(:gender)
+    th
+      = model_class.human_attribute_name(:region)
+  tbody
+    td
+      = query.from_month
+    td
+      = query.to_month
+    td[nowrap]
+      = query.localized_gender
+    td
+      = query.localized_region
+table.table.ranking_table
+  thead
+    tr
+      th
+        | Rank
+      th
+        | Concept
+      th
+        | Value
+  tbody
+    - query.results.each do |result|
+      tr class=(coloring ? "concept#{query.concept_ordering_number(result)}" : "") data-id=result.id
+        td
+          = result.rank
+        td
+          = result.str_concept
+        td
+          = result.value

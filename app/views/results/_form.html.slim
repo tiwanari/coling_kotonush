@@ -1,0 +1,8 @@
+= simple_form_for @result, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :query_id
+  = f.input :rank
+  = f.input :str_concept
+  = f.input :value
+  = f.button :submit, :class => 'btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")),
+                   results_path, :class => 'btn btn-default'

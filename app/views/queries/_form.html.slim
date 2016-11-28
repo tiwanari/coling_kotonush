@@ -1,0 +1,30 @@
+= bootstrap_nested_form_for(@query,
+    :url => {:action => "query"},
+    layout: :horizontal, label_col: "col-sm-3", control_col: "col-sm-7") do |f|
+    - if @query.errors.any?
+      #error_explanation
+        h2
+          = pluralize(@query.errors.count, "error") + ' prohibited this query from being sent.'
+        ul
+          - @query.errors.full_messages.each do |message|
+            li
+              = message
+    .form_group
+      .form-group
+        label.control-label.col-sm-3 Concepts
+        .col-sm-7
+          = select_tag 'query[concepts]', '', class: 'form-control', multiple: true
+    .form_group
+    - if I18n.locale != :ja
+      = f.collection_select :adjective_id, Adjective.all, :id, :eng_name
+    - else
+      = f.collection_select :adjective_id, Adjective.all, :id, :name
+    h4
+      = t("query.form.options")
+      | :
+    = f.date_select :from, start_year: 2012, end_year: 2015, default: Date.new(2013, 1, 1), discard_day: true
+    = f.date_select :to, start_year: 2012, end_year: 2015, default: Date.new(2013, 12, 1), discard_day: true
+    = f.select :gender, Query.localed_genders, selected: Query::GENDER_NOT_SPECIFIED_VALUE
+    = f.select :region, Query.region_choices, prompt: t("query.form.not_specified")
+    = f.form_group do
+      = f.submit t("query.form.ok"), class: "btn btn-primary btn-block btn-lg"

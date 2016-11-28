@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    models:
+      query: クエリ
+    attributes:
+      query:
+        adjective_id: 形容詞
+        adjective: 形容詞
+        concepts: 概念語
+        from: 開始日
+        to: 終了日
+        gender: 性別
+        region: 地方
+  query:
+    gender:
+      male: 男
+      female: 女
+      not_specified: 指定なし
+    region:
+      not_specified: 指定なし
+    form:
+      query: クエリ
+      options: オプション
+      not_specified: 指定なし
+      remove: 削除
+      add_concept: 概念語を追加
+      ok: OK

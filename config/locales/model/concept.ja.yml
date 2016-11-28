@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      concept: 概念語
+    attributes:
+      concept:
+        name: 名前
