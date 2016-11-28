@@ -1,6 +1,8 @@
 # Kotonush: Understanding Concepts Based on Values behind Social Media
-- **This is a snapshot of front-end system for [COLING 16 System Demonstrations](http://coling2016.anlp.jp/), an international conference.**
+- **This is a snapshot of the front-end system for [COLING 16 System Demonstrations](http://coling2016.anlp.jp/), an international conference.**
 - **This has not been refactored and will not be maintained.**
+- Please see [the back-end system](https://github.com/tiwanari/coling_order_concept).
+
 
 author: Tatsuya Iwanari, Kohei Ohara
 
